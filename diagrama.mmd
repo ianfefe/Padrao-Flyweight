@@ -1,0 +1,13 @@
+classDiagram
+    direction TD
+
+    class Assinatura
+    class Estudante
+    class InstituicaoFactory
+    class Instituicao
+
+    Assinatura "1" *-- "0..*" Estudante
+    Assinatura ..> InstituicaoFactory
+    Assinatura ..> Instituicao
+    Estudante "0..*" --> "1" Instituicao
+    InstituicaoFactory "1" o-- "0..*" Instituicao
